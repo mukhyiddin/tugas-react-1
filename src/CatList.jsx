@@ -29,10 +29,6 @@ function CatList() {
 
     console.log(cats);
 
-    if (cats.length === 0) {
-        return <h1 className="text-center">Tunggu Sebentar</h1>;
-    }
-
     return (
         <Container fluid="md">
             <InputGroup size="lg" className="mb-4 mt-4 justify-content-md-center">
