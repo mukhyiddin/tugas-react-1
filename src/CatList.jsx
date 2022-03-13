@@ -16,7 +16,9 @@ function CatList() {
         catTemps(result);
         setInputSearch(result);
     }, []);
-
+    // if (data.length === 0) {
+    //     return <h1>Tunggu Sebentar</h1>;
+    // }
     useEffect(() => {
         const filterInput = inputSearch.filter((item) =>
             item.name.toLowerCase().includes(input.toLowerCase())
@@ -27,9 +29,10 @@ function CatList() {
 
     console.log(cats);
 
-    // if (data.length === 0) {
-    //   return <h1>Tunggu Sebentar</h1>;
-    // }
+    if (cats.length === 0) {
+        return <h1 className="text-center">Tunggu Sebentar</h1>;
+    }
+
     return (
         <Container fluid="md">
             <InputGroup size="lg" className="mb-4 mt-4 justify-content-md-center">
@@ -51,7 +54,7 @@ function CatList() {
                                 alt="foto"
                                 style={{ width: "100%", height: "200px" }}
                             />
-                            <CatItem name={item.name} description={item.description} />
+                            <CatItem name={item.name} origin={item.origin} description={item.description} />
                         </Card>
                     </Col>
                 ))}

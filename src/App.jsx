@@ -2,9 +2,7 @@ import CatList from "./CatList";
 
 function App() {
 
-  // if (data.length === 0) {
-  //   return <h1>Tunggu Sebentar</h1>;
-  // }
+
 
   return (
     <>

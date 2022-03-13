@@ -9,12 +9,12 @@ function CatItem(item) {
 
     return (
         <>
-            <Card.Body style={{ background: "lightgrey" }}>
+            <Card.Body style={{ background: "LemonChiffon" }}>
                 <hr />
                 <Card.Title className="title">{item.name}</Card.Title>
                 <hr />
-                <Card.Text style={{ textAlign: "left", color: "black" }}>{item.description}</Card.Text>
-                <a onClick={handleClick} style={{ background: "black" }} class="btn btn-outline-info ">Info</a>
+                <Card.Text style={{ textAlign: "left", color: "black" }}>Origin : {item.origin}</Card.Text>
+                <a onClick={handleClick} class="btn btn-info">Info</a>
             </Card.Body>
         </>
     )
